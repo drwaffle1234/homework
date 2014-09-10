@@ -21,7 +21,14 @@ public class Turtle extends Turtlet
 	{	super.say (message);
 		theWorld.repaint();
 	}	//======================
-
+	public void clear(){
+		Color store = super.getColor();
+		super.switchTo(WHITE);
+		super.fillBox(10000, 10000);
+		super.switchTo(store);
+		theWorld.repaint();
+	}
+	
 
 	/** Make a circle of the given radius, Turtle at center. */
 
