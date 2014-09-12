@@ -8,23 +8,14 @@ public class turtlework {
 		lee.switchTo(Color.gray);
 		for(int i=0; i<200; i++){
 			lee.switchTo(Color.gray);
-			lee.RandomMoveTo();
+			lee.moveTo(0,6);
 			lee.fillCircle(5);
 			lee.sleep(10);
-			lee.move(lee.getX()+5, lee.getY()+5);
+			
 			
 			
 		}
-		lee.clear();
-		for(int i=0; i<200; i++){
-			lee.switchTo(Color.gray);
-			lee.RandomMoveTo();
-			lee.fillCircle(5);
-			lee.sleep(10);
-			lee.move(lee.getX()+5, lee.getY()+5);
-			
-			
-		}
+		
 		
 	}
 }
