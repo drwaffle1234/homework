@@ -3,6 +3,7 @@ package messageBase;
 import java.awt.Button;
 
 import java.awt.TextField;
+import java.awt.TextArea;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,6 +23,7 @@ public class Chat extends JApplet implements ActionListener{
 	TextField MIDDLE;
 	TextField INNER;
 	TextField MESSAGE;
+	TextArea MessageBox;
 	Button encode;
 	Button decode;
 	
@@ -50,7 +52,11 @@ public class Chat extends JApplet implements ActionListener{
 		
 		MESSAGE = new TextField("MESSAGE");
 		MESSAGE.setSize(100, 25);
-		MESSAGE.setLocation(90,100);
+		MESSAGE.setLocation(90,20);
+		
+		MessageBox= new TextArea("MESSAGE");
+		MessageBox.setSize(200, 140);
+		MessageBox.setLocation(90,60);
 		
 		add(encode);
 		add(decode);
@@ -58,6 +64,7 @@ public class Chat extends JApplet implements ActionListener{
 		add(MIDDLE);
 		add(INNER);
 		add(MESSAGE);
+		add(MessageBox);
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
