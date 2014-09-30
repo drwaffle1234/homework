@@ -12,7 +12,7 @@ import javax.swing.JApplet;
 
 
 public class Chat extends JApplet implements ActionListener{
-
+	
 	/**
 	 * 
 	 */
@@ -65,12 +65,20 @@ public class Chat extends JApplet implements ActionListener{
 		add(INNER);
 		add(MESSAGE);
 		add(MessageBox);
+		encode.addActionListener(this);
+		decode.addActionListener(this);
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
+		SimpleEnigma code = new SimpleEnigma(TOP.getText(), MIDDLE.getText(),INNER.getText());
 		if(e.getSource()==encode){
-			
+			String encodeM =code.encode(MESSAGE.getText());
+			MessageBox.setText(encodeM);
+			code.reset();
+		}else if(e.getSource()==decode){
+			String decodeM =code.decode(MESSAGE.getText());
+			MessageBox.setText(decodeM);
+			code.reset();
 		}
 		
 	}
