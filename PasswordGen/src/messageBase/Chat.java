@@ -1,14 +1,14 @@
 package messageBase;
 
-import java.awt.Button;
 
+import java.awt.Button;
 import java.awt.TextField;
 import java.awt.TextArea;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JApplet;
+import javax.swing.JFrame;
 
 public class Chat extends JApplet implements ActionListener {
 
@@ -109,5 +109,23 @@ public class Chat extends JApplet implements ActionListener {
 			INNER.setText("ZXCVBNMQWERTYUIOPAS#DFGHJKL");
 		}
 
+	}
+
+	public static void main(String[] args) {
+
+		Chat.run(new Chat(), 400, 400);
+
+	}
+
+	public static void run(JApplet applet, int width, int height) {
+
+		JFrame frame = new JFrame();
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().add(applet);
+		frame.setSize(width, height);
+		applet.init();
+		applet.start();
+		frame.setTitle("Password Generator");
+		frame.setVisible(true);
 	}
 }
