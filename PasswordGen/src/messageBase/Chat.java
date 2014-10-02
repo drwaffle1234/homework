@@ -1,6 +1,5 @@
 package messageBase;
 
-
 import java.awt.Button;
 import java.awt.TextField;
 import java.awt.TextArea;
