@@ -18,6 +18,7 @@ public class EnigmaMachine {
 	public static void main(String[] args) {
 		
 		System.out.println("Please enter the Keys for Oute Rotor , Middle Rotor, Inner Rotor: ");
+		@SuppressWarnings("resource")
 		Scanner kb = new Scanner(System.in);
 		String key1 = kb.nextLine();
 		String key2 = kb.nextLine();
