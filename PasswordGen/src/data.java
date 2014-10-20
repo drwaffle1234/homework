@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class data {
 	static Random gen = new Random();
-	boolean fastPW=false;
+	boolean fastPW=true;
 	public String getSfastPW(){
 		String truefalse;
 		if(fastPW==true)
@@ -24,6 +24,7 @@ public class data {
 		
 		String case1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 			for(int i =0; i<value; i++){
+				
 			int randomInt = gen.nextInt(case1.length());
 			if (randomInt - 1 == -1) {
 				Password+=case1.charAt(randomInt);

@@ -147,15 +147,15 @@ public class PasswordGen extends JApplet implements ActionListener,
 		radio1.setSize(100, 25);
 		radio1.setLocation(170, x + 25);
 
-		radio2 = new Checkbox("Upper Case", false);
+		radio2 = new Checkbox("Upper Case", true);
 		radio2.setSize(100, 25);
 		radio2.setLocation(170, x + 50);
 
-		radio3 = new Checkbox("1234...", false);
+		radio3 = new Checkbox("1234...", true);
 		radio3.setSize(100, 25);
 		radio3.setLocation(170, x + 75);
 
-		radio4 = new Checkbox("!@#$%....", false);
+		radio4 = new Checkbox("!@#$%....", true);
 		radio4.setSize(100, 25);
 		radio4.setLocation(170, x + 100);
 		
@@ -426,7 +426,7 @@ public class PasswordGen extends JApplet implements ActionListener,
 					Thread.sleep(100);
 				} catch (InterruptedException ignore) {
 				}
-
+					
 				progress += 1;
 				getValue = "" + progress;
 				// System.out.println(progress + " do in back ground ");
