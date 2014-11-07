@@ -25,9 +25,9 @@ import javax.swing.SwingWorker;
 public class PasswordGen extends JApplet implements ActionListener,
 		PropertyChangeListener {
 	private static final long serialVersionUID = 1L;
-	private boolean debugMode = false;
+	private boolean debugMode = true;
 	private boolean settingsMode = false;
-	private boolean on=false;
+	private boolean debugModeOnOff=false;
 	data Data = new data();
 
 	private int x = 100;
@@ -352,12 +352,12 @@ public class PasswordGen extends JApplet implements ActionListener,
 		}
 			
 		else if (evt.getSource() == debugAble){
-			if(on==false){
+			if(debugModeOnOff==false){
 				debug.show();
-				on=true;
+				debugModeOnOff=true;
 			}else{
 				debug.hide();
-				on=false;
+				debugModeOnOff=false;
 			}
 		
 		}	else {
