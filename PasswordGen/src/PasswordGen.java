@@ -27,7 +27,7 @@ public class PasswordGen extends JApplet implements ActionListener,
 	private static final long serialVersionUID = 1L;
 	private boolean debugMode = true;
 	private boolean settingsMode = false;
-	private boolean debugModeOnOff=false;
+	private boolean debugModeOnOff = false;
 	data Data = new data();
 
 	private int x = 100;
@@ -41,7 +41,7 @@ public class PasswordGen extends JApplet implements ActionListener,
 	Button settings;
 	Button debugAble;
 	Button PBColor;
-	
+
 	TextField nameField;
 	TextField passwordL;
 	TextField fastPWONOFF;
@@ -55,14 +55,13 @@ public class PasswordGen extends JApplet implements ActionListener,
 	Checkbox radio2;
 	Checkbox radio3;
 	Checkbox radio4;
-	
+
 	Checkbox radio11;
 	Checkbox radio22;
 	Checkbox radio33;
 	Checkbox radio44;
 	Checkbox radio55;
 	Checkbox radio66;
-	 
 
 	@SuppressWarnings("deprecation")
 	public void init() {
@@ -81,7 +80,7 @@ public class PasswordGen extends JApplet implements ActionListener,
 		debug.setSize(45, 25);
 		debug.setLocation(190, x - 75);
 		debug.hide();
-		
+
 		fast = new Button("FASTPW");
 		fast.setSize(55, 25);
 		fast.setLocation(30, x + 25);
@@ -95,12 +94,12 @@ public class PasswordGen extends JApplet implements ActionListener,
 		debugAble.setSize(50, 25);
 		debugAble.setLocation(5, x - 50);
 		debugAble.hide();
-		
+
 		PBColor = new Button("PB Color");
 		PBColor.setSize(50, 25);
 		PBColor.setLocation(5, x - 25);
 		PBColor.hide();
-		
+
 		fastPWONOFF = new TextField(Data.getSfastPW());
 		fastPWONOFF.setSize(40, 25);
 		fastPWONOFF.setLocation(90, x + 25);
@@ -158,38 +157,37 @@ public class PasswordGen extends JApplet implements ActionListener,
 		radio4 = new Checkbox("!@#$%....", true);
 		radio4.setSize(100, 25);
 		radio4.setLocation(170, x + 100);
-		
-		radio11 = new Checkbox("Lower Case",BPC, true);
+
+		radio11 = new Checkbox("Lower Case", BPC, true);
 		radio11.setSize(100, 25);
 		radio11.setLocation(170, x + 25);
 		radio11.hide();
-		
-		radio22 = new Checkbox("Upper Case",BPC, false);
+
+		radio22 = new Checkbox("Upper Case", BPC, false);
 		radio22.setSize(100, 25);
 		radio22.setLocation(170, x + 50);
 		radio22.hide();
-		
-		radio33 = new Checkbox("1234...",BPC, false);
+
+		radio33 = new Checkbox("1234...", BPC, false);
 		radio33.setSize(100, 25);
 		radio33.setLocation(170, x + 75);
 		radio33.hide();
-		
-		radio44 = new Checkbox("!@#$%....",BPC, false);
+
+		radio44 = new Checkbox("!@#$%....", BPC, false);
 		radio44.setSize(100, 25);
 		radio44.setLocation(170, x + 100);
 		radio44.hide();
-		
-		radio55 = new Checkbox("Lower Case",BPC, true);
+
+		radio55 = new Checkbox("Lower Case", BPC, true);
 		radio55.setSize(100, 25);
 		radio55.setLocation(170, x + 25);
 		radio55.hide();
-		
-		radio66 = new Checkbox("Upper Case",BPC, false);
+
+		radio66 = new Checkbox("Upper Case", BPC, false);
 		radio66.setSize(100, 25);
 		radio66.setLocation(170, x + 50);
 		radio66.hide();
-		
-		
+
 		add(okButton);
 		add(clear);
 		add(debug);
@@ -213,7 +211,6 @@ public class PasswordGen extends JApplet implements ActionListener,
 		add(radio44);
 		add(radio55);
 		add(radio66);
-		
 
 		add(pb);
 		PBColor.addActionListener(this);
@@ -310,7 +307,7 @@ public class PasswordGen extends JApplet implements ActionListener,
 			if (settingsMode == false) {
 				okButton.hide();
 				clear.hide();
-				//debug.hide();
+				// debug.hide();
 				fastPWONOFF.hide();
 				nameField.hide();
 				passwordL.hide();
@@ -329,7 +326,7 @@ public class PasswordGen extends JApplet implements ActionListener,
 			} else {
 				okButton.show();
 				clear.show();
-				//debug.show();
+				// debug.show();
 				// fastPWONOFF.show();
 				nameField.show();
 				passwordL.show();
@@ -347,21 +344,20 @@ public class PasswordGen extends JApplet implements ActionListener,
 				settingsMode = false;
 			}
 
-		}else if(evt.getSource() == PBColor){
-			
+		} else if (evt.getSource() == PBColor) {
+
 		}
-			
-		else if (evt.getSource() == debugAble){
-			if(debugModeOnOff==false){
+
+		else if (evt.getSource() == debugAble) {
+			if (debugModeOnOff == false) {
 				debug.show();
-				debugModeOnOff=true;
-			}else{
+				debugModeOnOff = true;
+			} else {
 				debug.hide();
-				debugModeOnOff=false;
+				debugModeOnOff = false;
 			}
-		
-		}	else {
-		
+
+		} else {
 
 			nameField.setText("clear");
 			okButton.enable();
@@ -426,7 +422,7 @@ public class PasswordGen extends JApplet implements ActionListener,
 					Thread.sleep(100);
 				} catch (InterruptedException ignore) {
 				}
-					
+
 				progress += 1;
 				getValue = "" + progress;
 				// System.out.println(progress + " do in back ground ");
