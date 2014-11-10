@@ -33,7 +33,7 @@ public class data {
 	        }
 		}
 			if(fastPW==false){
-				PasswordGen.sleep(100*value);
+				sleep(100*value);
 			}
 			return Password;
 	}
@@ -50,7 +50,7 @@ public class data {
 	        }
 		}
 			if(fastPW==false){
-				PasswordGen.sleep(100*value);
+				sleep(100*value);
 			}
 			return Password;
 	}
@@ -67,7 +67,7 @@ public class data {
 	        }
 		}
 			if(fastPW==false){
-				PasswordGen.sleep(100*value);
+				sleep(100*value);
 			}
 			return Password;
 	}
@@ -84,7 +84,7 @@ public class data {
 	        }
 		}
 			if(fastPW==false){
-				PasswordGen.sleep(100*value);
+				sleep(100*value);
 			}
 			return Password;
 	}
@@ -101,7 +101,7 @@ public class data {
 	        }
 		}
 			if(fastPW==false){
-				PasswordGen.sleep(100*value);
+				sleep(100*value);
 			}
 			return Password;
 	}
@@ -118,7 +118,7 @@ public class data {
 	        }
 		}
 			if(fastPW==false){
-				PasswordGen.sleep(100*value);
+				sleep(100*value);
 			}
 			return Password;
 	}
@@ -135,7 +135,7 @@ public class data {
 	        }
 		}
 			if(fastPW==false){
-				PasswordGen.sleep(100*value);
+				sleep(100*value);
 			}
 			return Password;
 	}
@@ -152,7 +152,7 @@ public class data {
 	        }
 		}
 			if(fastPW==false){
-				PasswordGen.sleep(100*value);
+				sleep(100*value);
 			}
 			return Password;
 	}
@@ -169,7 +169,7 @@ public class data {
 	        }
 		}
 			if(fastPW==false){
-				PasswordGen.sleep(100*value);
+				sleep(100*value);
 			}
 			return Password;
 	}
@@ -186,7 +186,7 @@ public class data {
 	        }
 		}
 			if(fastPW==false){
-				PasswordGen.sleep(100*value);
+				sleep(100*value);
 			}
 			return Password;
 	}
@@ -203,7 +203,7 @@ public class data {
 	        }
 		}
 			if(fastPW==false){
-				PasswordGen.sleep(100*value);
+				sleep(100*value);
 			}
 			return Password;
 	}
@@ -222,7 +222,7 @@ public class data {
 		}
 			
 			if(fastPW==false){
-				PasswordGen.sleep(100*value);
+				sleep(100*value);
 			}
 			
 			return Password;
@@ -240,7 +240,7 @@ public class data {
 	        	Password+=case1.charAt(randomInt-1);
 	        }
 		}
-			PasswordGen.sleep(100*value);
+			sleep(100*value);
 			return Password;
 	}
 	public String F3(int value) {
@@ -255,8 +255,17 @@ public class data {
 	        	Password+=case1.charAt(randomInt-1);
 	        }
 		}
-			PasswordGen.sleep(100*value);
+			sleep(100*value);
 			return Password;
+	}
+
+	public static int sleep(int value) {
+		try {
+			Thread.sleep(value); // 1000 milliseconds is one second.
+		} catch (InterruptedException ex) {
+			Thread.currentThread().interrupt();
+		}
+		return value;
 	}
 
 }	

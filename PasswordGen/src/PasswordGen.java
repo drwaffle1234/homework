@@ -154,7 +154,7 @@ public class PasswordGen extends JApplet implements ActionListener,
 		radio3.setSize(100, 25);
 		radio3.setLocation(170, x + 75);
 
-		radio4 = new Checkbox("!@#$%....", true);
+		radio4 = new Checkbox("!@#$%....", false);
 		radio4.setSize(100, 25);
 		radio4.setLocation(170, x + 100);
 
@@ -395,14 +395,6 @@ public class PasswordGen extends JApplet implements ActionListener,
 		}
 	}
 
-	public static int sleep(int value) {
-		try {
-			Thread.sleep(value); // 1000 milliseconds is one second.
-		} catch (InterruptedException ex) {
-			Thread.currentThread().interrupt();
-		}
-		return value;
-	}
 
 	class Task extends SwingWorker<Void, Void> {
 		/*
