@@ -1,4 +1,4 @@
-package turtlework;
+package cups;
 
 import turtlework.Turtle;
 
