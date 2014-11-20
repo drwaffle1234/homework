@@ -1,7 +1,7 @@
 package cups;
 
 
-public class copytoschool {
+public class cupmain {
 	public static void main(String[] args) {
 		
 	}
