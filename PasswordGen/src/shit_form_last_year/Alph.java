@@ -1,9 +1,8 @@
 package shit_form_last_year;
 
-import acm.program.*;
-import acm.graphics.*;
-
 import java.awt.Color;
+
+import acm.graphics.GTurtle;
 
 //all letters with curves in them are imperfect
 
