@@ -12,7 +12,6 @@ public class data {
 		
 		return truefalse;
 	}
-	
 	public boolean getfastPW(){
 		return fastPW;
 	}
@@ -105,23 +104,6 @@ public class data {
 			}
 			return Password;
 	}
-	public String F4(int value) {
-		String Password="";
-		
-		String case1 = "!#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
-			for(int i =0; i<value; i++){
-			int randomInt = gen.nextInt(case1.length());
-			if (randomInt - 1 == -1) {
-				Password+=case1.charAt(randomInt);
-	        } else {
-	        	Password+=case1.charAt(randomInt-1);
-	        }
-		}
-			if(fastPW==false){
-				sleep(100*value);
-			}
-			return Password;
-	}
 	public String F12(int value) {
 		String Password="";
 		
@@ -191,9 +173,27 @@ public class data {
 			return Password;
 	}
 	public String F24(int value) {
+
 		String Password="";
 		
 		String case1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+			for(int i =0; i<value; i++){
+			int randomInt = gen.nextInt(case1.length());
+			if (randomInt - 1 == -1) {
+				Password+=case1.charAt(randomInt);
+	        } else {
+	        	Password+=case1.charAt(randomInt-1);
+	        }
+		}
+			if(fastPW==false){
+				sleep(100*value);
+			}
+			return Password;
+	}
+	public String F4(int value) {
+		String Password="";
+		
+		String case1 = "!#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 			for(int i =0; i<value; i++){
 			int randomInt = gen.nextInt(case1.length());
 			if (randomInt - 1 == -1) {
@@ -258,8 +258,7 @@ public class data {
 			sleep(100*value);
 			return Password;
 	}
-
-	public static int sleep(int value) {
+    public static int sleep(int value) {
 		try {
 			Thread.sleep(value); // 1000 milliseconds is one second.
 		} catch (InterruptedException ex) {
