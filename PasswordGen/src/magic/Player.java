@@ -17,5 +17,6 @@ import javax.swing.JFrame;
 import javax.swing.border.Border;
 import javax.swing.SwingWorker;
 public class Player {
-
+	private int setHealth=20;
+	private int maxHealth=200;
 }
