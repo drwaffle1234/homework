@@ -41,7 +41,7 @@ public class PasswordGen extends JApplet implements ActionListener,
 	Button settings;
 	Button debugAble;
 	Button PBColor;
-
+	
 	TextField nameField;
 	TextField passwordL;
 	TextField fastPWONOFF;

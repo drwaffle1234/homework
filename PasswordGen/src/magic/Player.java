@@ -1,13 +1,44 @@
 package magic;
-import java.awt.Button;
-import java.awt.Color;
-import java.awt.TextField;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-import javax.swing.JApplet;
-import javax.swing.JOptionPane;
 public class Player {
-	private int setHealth=20;
-	private int maxHealth=200;
+	private int Health=20;
+	private int maxHealth=1000;
+	private int minHealth=-1000;
+	
+	public Player(){
+		Health=20;
+	}
+	
+	public Player(int health){
+		Health=health;
+	}
+	
+	/**
+	 * + one two the health
+	 */
+	public void plusOne() {
+		Health = Health + 1;
+	}
+	/**
+	 * - one two the health
+	 */
+	public void SubOne() {
+		Health = Health - 1;
+	}
+	/**
+	 * reset health 
+	 */
+	public void reset() {
+		Health = 20;
+	}
+	public int getHealth(){
+		return Health;
+	}
+	public String getHealthinString(){
+		return ""+Health;
+	}
+	public void setHealth(int Health){
+		this.Health=Health;
+	}
+
 }
