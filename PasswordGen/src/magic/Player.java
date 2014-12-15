@@ -2,8 +2,8 @@ package magic;
 
 public class Player {
 	private int Health=20;
-	private int maxHealth=1000;
-	private int minHealth=-1000;
+	//private int maxHealth=1000;
+	//private int minHealth=-1000;
 	
 	public Player(){
 		Health=20;
