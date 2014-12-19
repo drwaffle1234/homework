@@ -107,7 +107,7 @@ public class data {
 	public String F12(int value) {
 		String Password="";
 		
-		String case1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1";
+		String case1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 			for(int i =0; i<value; i++){
 			int randomInt = gen.nextInt(case1.length());
 			if (randomInt - 1 == -1) {
