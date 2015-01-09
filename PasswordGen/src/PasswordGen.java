@@ -48,7 +48,7 @@ public class PasswordGen extends JApplet implements ActionListener,
 	TextField PBnumber;
 	TextField mesge2;
 	TextArea mesge;
-
+	
 	JProgressBar pb;
 
 	Checkbox radio1;
