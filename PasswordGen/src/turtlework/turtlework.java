@@ -1,5 +1,7 @@
 package turtlework;
 
+import hitbox.Turtle;
+
 import java.awt.Color;
 
 public class turtlework {
