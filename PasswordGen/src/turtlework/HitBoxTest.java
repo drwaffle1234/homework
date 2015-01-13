@@ -1,7 +1,5 @@
 package turtlework;
 
-import hitbox.Turtle;
-
 public class HitBoxTest {
 
 	public static void main(String[] args) {
