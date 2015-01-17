@@ -1,6 +1,6 @@
 package turtlework;
 
-import hitbox.Turtle;
+
 
 public class copytoschool {
 	Turtle hard=new Turtle();
