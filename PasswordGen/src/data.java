@@ -1,5 +1,5 @@
 import java.util.Random;
-
+import java.awt.Button;
 public class data {
 	static Random gen = new Random();
 	boolean fastPW=true;
